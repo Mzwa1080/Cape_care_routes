@@ -3,18 +3,18 @@
 
 <head>
 	<title>Cape care routes</title>
-	<link rel="stylesheet" href="simple-grid.css">
-	<link rel="stylesheet" href="simple-grid.min.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="frameWOrk/simple-grid.css">
+	<link rel="stylesheet" href="frameWOrk/simple-grid.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-						<img class="col-12 center" src="CPT2.jpg" alt="" height="150px"  width="100%">
-						<h1 class="col-12 head">Cape care routes</h1>
-						<small class="col-6-sm text">Cape care routes -is city of Cape Town’s design and the Cape care routes that allows one to visit projects that have an enviromental conservation.</small>
+						<img class="col-12 center " src="pics/CPT2.jpg" alt="" height="150px"  width="100%">
+						<center><h1 class="col-12 head">Cape care routes</h1></center>
+						<small class="col-6-sm text">Cape care routes is city of Cape Town’s design and the cape care routes that allows one to visit projects that have an enviromental conservation.</small>
 						<hr>
 			</div>
 		</div>
@@ -40,12 +40,46 @@
 
 				<!-- input some text with a slide show image in it -->
 		<div class="row">
-			<div class="col-12 slideShow">
-					<img src="CPT .jpg" alt="Cape Town Image" width="" text-align="center">
-					<div class="col-6-sm text2">A person should care about Cape care routes, because the routes gives our visitors and locals in Cape Town a chance and an opportunity to see how people live, how they grow their own food, how they build their own homes, and how they make crafts and the beauty of Cape Town.	</div>
+			<div class="col-12 slideShow ">
+					<img class="ourImage" src="pics/bush2.jpeg" alt="Cape Town Image" height="10%" text-align="center">
+						<img class="ourImage" src="pics/CPT2.jpg" alt="" height="10%"  width="">
+						<img class="ourImage" src="pics/bush2.jpeg" alt="Cape Town Image" height="10%" text-align="center">
+						<img class="ourImage" src="pics/bush2.jpeg" alt="Cape Town Image" height="10%" text-align="center">
+						<img class="ourImage" src="pics/CPT2.jpg" alt="" height="10%"  width="">
+
+					<div class="col-6-sm text2 ">A person should care about cape care routes, because the routes gives our visitors and locals in Cape Town a chance and an opportunity to see how people live, how they grow their own food, how they build their own homes, and how they make crafts and the beauty of Cape Town.	</div>
 			</div>
 		</div>
 
+		<!-- <div class="col-12">
+					<img class="ourImage" src="bush2.jpeg" alt="" height="150px"  width="100%">
+					<center><h1 class="col-12 head">Cape care routes</h1></center>
+
+		</div>
+
+		<div class="col-12">
+					<img class=" ourImage" src="bush2.jpeg" alt="" height="150px"  width="100%">
+					<center><h1 class="col-12 head">Cape care routes</h1></center>
+
+		</div> -->
+
 	</div>
 </body>
+
+<script>
+var myIndex = 0;
+slide();
+
+function slide() {
+
+    var change = document.getElementsByClassName("ourImage");
+    for (var i = 0; i < change.length; i++) {
+       change[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > change.length) {myIndex = 1}
+    change[myIndex-1].style.display = "block";
+    setTimeout(slide, 2000); // Change image every 2 seconds
+}
+// </script>
 </html>
